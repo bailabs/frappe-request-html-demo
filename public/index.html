@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head lang='en'>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
+	<title>frappe-request-html-demo</title>
+
+	<style>
+		body {
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			color: #333;
+			font-weight: 300;
+		}
+	</style>
+</head>
+<body>
+	<h1>frappe-request-html-demo</h1>
+	Username: <input type="text" id="username" />
+	Password: <input type="password" id="password" />
+	<button type="button" id="login">Login</button>
+	<script src='bundle.js'></script>
+	<script>
+		document.getElementById("login").addEventListener("click", function() {
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+			frappe(username, password);
+		});
+	</script>
+</body>
+</html>
